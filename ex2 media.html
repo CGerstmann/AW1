@@ -1,0 +1,32 @@
+<html>
+<body>
+    <h1>Exercicio 2</h1>
+        <div>
+            <label>Nota 1:</label>
+            <input type="number" id="ex21" />
+            <label>Nota 2:</label>
+            <input type="number" id="ex22" />
+            <label>Nota 3:</label>
+            <input type="number" id="ex23" />
+            <input type="button" value="Media" onclick="Media()" />
+            <b id="r2">Resultado</b>
+        </div>
+        <script>
+         function Media() {
+                let primeira = document.getElementById("ex21").value
+                let segunda = document.getElementById("ex22").value
+                let terceira = document.getElementById("ex23").value
+
+                let media = ((parseInt(primeira) + parseInt(segunda) + parseInt(terceira)) / 3)
+
+                if (media >= 7) {
+                    document.getElementById("r2").outerHTML = '<a id="r2" style="background-color:green;color:white">Aprovado</a>'
+                } else if (media >= 5) {
+                    document.getElementById("r2").outerHTML = '<a id="r2" style="background-color:yellow;color:black">Recuperação</a>'
+                } else {
+                    document.getElementById("r2").outerHTML = '<a id="r2" style="background-color:red;color:white">Reprovado</a>'
+                }
+            }
+        </script>
+</body>
+</html>

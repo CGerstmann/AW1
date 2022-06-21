@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <h6>EX de Ordenação</h6>
+    </head>
+    <body>
+            <h1>Exercicio 1</h1>
+            <div>
+                <label>Insira valores (x,y,z,w)</label>
+                <input type="text" id="ex1"/>
+                <input type="button" value="Ordenar" onclick="Ordenar()"/>
+                <b id="r1">Resultado</b>
+            </div>
+            <hr/>
+            <script>
+                function Ordenar()
+                {
+                    let ex1 = document.getElementById("ex1").value
+                    debugger
+                    let lista = ex1.split(",")
+                    let order = lista.sort(function(a,b){
+                        return a - b
+                    })
+                    let retorno = order.toString()
+                    document.getElementById("r1").innerHTML = retorno
+                }
+            </script>
+    </body>
+</html>

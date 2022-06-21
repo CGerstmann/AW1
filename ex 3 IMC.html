@@ -1,0 +1,31 @@
+<html>
+<body>
+<h3>ex3</h3>
+<h1>Exercicio 3</h1>
+        <div>
+            <label>Sexo (M/F):</label>
+            <input type="text" id="sexo" />
+            <label>Altura (cm):</label>
+            <input type="number" id="altura" />
+            <input type="button" value="Calcular" onclick="Calcular()" />
+            <input type="number" id="r3" disabled/>
+        </div>
+        <hr/>
+</div>
+<script>
+function Calcular() {
+    let sexo = document.getElementById("sexo").value
+    let altura = document.getElementById("altura").value
+    //sei que não é o melhor jeito de fazer, mas era o mais rápido. idealmente, um radio select ou dropdown seria melhor
+    if (sexo == "F" || sexo == "f") {
+        var ideal = (parseFloat("62.1") * parseInt(altura)) / 100 - parseFloat("44.7")
+        document.getElementById("r3").value = ideal
+    }
+    else if (sexo == "M" || sexo == "m") {
+        var ideal = (parseFloat("72.7") * parseInt(altura)) / 100 - parseFloat("58.0")
+        document.getElementById("r3").value = ideal
+    }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<html>
+<body>
+<h1>Exercicio 4</h1>
+        <div>
+            <label>Salário:</label>
+            <input type="number" id="sal1" />
+            <input type="button" value="Aumento" onclick="Aumento()" />
+            <label>Aumento (%):</label>
+            <input type="number" id="aum1" disabled/>
+            <label>Aumento (R$):</label>
+            <input type="number" id="aum2" disabled/>
+            <label>Novo Salário:</label>
+            <input type="number" id="sal2" disabled/>
+        </div>
+        <script>
+             function Aumento() {
+                let salario = parseInt(document.getElementById("sal1").value)
+
+                if (salario <= 280) {
+                    var aumento1 = 20
+                    var aumento2 = (salario / 100) * aumento1
+                } else if (salario <= 700) {
+                    var aumento1 = 15
+                    var aumento2 = (salario / 100) * aumento1
+                } else if (salario <= 1500) {
+                    var aumento1 = 10
+                    var aumento2 = (salario / 100) * aumento1
+                }
+                else {
+                    var aumento1 = 5
+                    var aumento2 = (salario / 100) * aumento1
+                }
+                var final = salario + aumento2
+                document.getElementById("aum1").value = aumento1
+                document.getElementById("aum2").value = aumento2
+                document.getElementById("sal2").value = final
+            }
+        </script>     
+</body>
+</html>
